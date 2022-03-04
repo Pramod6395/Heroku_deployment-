@@ -1,3 +1,5 @@
+Developed app link: https://winequalitypredictionml1.herokuapp.com/
+
 # Flask-Docker-App
 
 ## Set up & Installation.

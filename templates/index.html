@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+  <center>
+ <div class="login">
+	<h1>Wine Quality prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	 <input type="number" step="any" name="fixed_acidity" placeholder="fixed acidity" required="required" />
+       <input type="number" step="any" name="volatile_acidity" placeholder="volatile acidity" required="required" />
+		    <input type="number" step="any" name="citric_acid" placeholder="citric acid" required="required" />
+        <input type="number" step="any" name="residual_sugar" placeholder="residual sugar" required="required" />
+        <input type="number" step="any" name="chlorides" placeholder="chlorides" required="required" />
+        <input type="number" step="any" name="free_sulfur_dioxide" placeholder="free sulfur dioxide" required="required" />
+        <input type="number" step="any" name="total_sulfur_dioxide" placeholder="total sulfur dioxide" required="required" />
+         <input type="number" step="any" name="density" placeholder="density" required="required" />
+         <input type="number" step="any" name="pH" placeholder="pH" required="required" />
+         <input type="number" step="any" name="sulphates" placeholder="sulphates" required="required" />
+          <input type="number" step="any" name="alcohol" placeholder="alcohol" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+</center>
+
+</body>
+</html>

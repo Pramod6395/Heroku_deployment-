@@ -1,0 +1,16 @@
+services:
+ 
+ backend2:
+  # build: ./
+  image: python-docker
+  # container_name: 1130c4b14053
+  restart: always
+  ports:
+   - 5000:5000
+  # volumes:
+  #  - ./app/: /app/
+  volumes:
+    - type: bind
+      source: ./
+      target: /python-docker
+
